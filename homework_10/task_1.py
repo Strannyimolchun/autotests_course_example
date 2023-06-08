@@ -22,9 +22,14 @@ def generate_random_name():
 
     a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
          'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-    yield f'{" ".join(["".join(random.sample(a, random.randint(1, 15))) for _ in range(2)])}'
+    while True:
+        yield f'{" ".join(["".join(random.sample(a, random.randint(1, 15))) for _ in range(2)])}'
 
 
 gen = generate_random_name()
 # print(type(generate_random_name()))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
 print(next(gen))
